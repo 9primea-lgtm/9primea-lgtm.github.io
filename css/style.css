@@ -1,127 +1,407 @@
-/* Cyberpunk Portfolio Theme */
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+/* ===========================
+   GOOGLE STYLE RESET
+=========================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#070b14;
-    color:#ffffff;
-    font-family:'Poppins',sans-serif;
-    min-height:100vh;
+
+background:#040814;
+color:#fff;
+overflow-x:hidden;
+
 }
 
-/* Navbar */
+/* ===========================
+BACKGROUND
+=========================== */
 
-nav{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
-    background:#0d1117;
-    border-bottom:2px solid #00f5ff;
+.bg{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+
+background:
+radial-gradient(circle at top,#00e5ff22,transparent 45%),
+radial-gradient(circle at bottom,#8a2be222,transparent 45%),
+linear-gradient(135deg,#020617,#08111f,#020617);
+
+}
+
+/* ===========================
+NAVBAR
+=========================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+
+padding:20px 70px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(10,15,30,.6);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(0,229,255,.2);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#00e5ff;
+
+letter-spacing:2px;
+
+text-shadow:
+0 0 10px #00e5ff,
+0 0 30px #00e5ff;
+
 }
 
 nav a{
-    color:#00f5ff;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
+
+text-decoration:none;
+
+color:white;
+
+margin-left:30px;
+
+font-size:18px;
+
+transition:.4s;
+
 }
 
 nav a:hover{
-    color:#b026ff;
-    text-shadow:0 0 15px #b026ff;
+
+color:#00e5ff;
+
+text-shadow:0 0 15px cyan;
+
 }
 
-/* Headings */
+/* ===========================
+HERO
+=========================== */
 
-h1,h2,h3{
-    font-family:'Orbitron',sans-serif;
-    text-align:center;
-    margin:20px 0;
+.hero{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:140px 10%;
+
+min-height:100vh;
+
 }
 
-h1{
-    color:#00f5ff;
-    text-shadow:0 0 20px #00f5ff;
+.content{
+
+width:55%;
+
 }
 
-h2{
-    color:#b026ff;
+.content h3{
+
+font-size:35px;
+
+color:#ddd;
+
 }
 
-/* Profile Image */
+.content h1{
 
-img{
-    display:block;
-    margin:20px auto;
-    max-width:250px;
-    border-radius:50%;
-    border:3px solid #00f5ff;
-    box-shadow:0 0 25px #00f5ff;
+font-size:90px;
+
+margin:10px 0;
+
+color:#00e5ff;
+
+text-shadow:
+
+0 0 20px cyan,
+
+0 0 40px cyan;
+
 }
 
-/* Sections */
+.content h2{
 
-section,
-div{
-    width:90%;
-    max-width:1000px;
-    margin:20px auto;
-    padding:20px;
-    background:#111827;
-    border:1px solid #00f5ff;
-    border-radius:15px;
+font-size:38px;
+
+color:#9d4edd;
+
+margin-bottom:20px;
+
 }
 
-p,li{
-    text-align:center;
-    line-height:1.8;
+.content p{
+
+font-size:19px;
+
+line-height:35px;
+
+color:#bfbfbf;
+
+margin-bottom:35px;
+
 }
 
-/* Form */
+/* ===========================
+BUTTONS
+=========================== */
 
-form{
-    width:90%;
-    max-width:600px;
-    margin:auto;
+.buttons{
+
+display:flex;
+
+gap:20px;
+
 }
 
-input,
-textarea{
-    width:100%;
-    padding:12px;
-    background:#0f172a;
-    color:white;
-    border:1px solid #00f5ff;
-    border-radius:8px;
+.btn{
+
+padding:15px 35px;
+
+background:#00e5ff;
+
+color:#000;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.4s;
+
+box-shadow:
+
+0 0 20px cyan;
+
 }
 
-button{
-    background:#00f5ff;
-    color:black;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 0 40px cyan;
+
 }
 
-button:hover{
-    background:#b026ff;
-    color:white;
-    box-shadow:0 0 20px #b026ff;
+.btn2{
+
+padding:15px 35px;
+
+border:2px solid #00e5ff;
+
+color:#00e5ff;
+
+border-radius:40px;
+
+text-decoration:none;
+
+transition:.4s;
+
 }
 
-/* Footer */
+.btn2:hover{
+
+background:#00e5ff;
+
+color:#000;
+
+box-shadow:0 0 30px cyan;
+
+}
+
+/* ===========================
+PROFILE IMAGE
+=========================== */
+
+.image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.image img{
+
+width:360px;
+
+height:360px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid cyan;
+
+box-shadow:
+
+0 0 25px cyan,
+
+0 0 60px cyan;
+
+transition:.5s;
+
+}
+
+.image img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ===========================
+SECTION
+=========================== */
+
+section{
+
+padding:100px 10%;
+
+}
+
+section h2{
+
+text-align:center;
+
+font-size:50px;
+
+margin-bottom:40px;
+
+color:#00e5ff;
+
+text-shadow:0 0 15px cyan;
+
+}
+
+section p{
+
+font-size:18px;
+
+line-height:35px;
+
+text-align:center;
+
+color:#ccc;
+
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(0,229,255,.2);
+
+backdrop-filter:blur(10px);
+
+padding:35px;
+
+border-radius:20px;
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+border-color:#00e5ff;
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 50px #00e5ff44;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+color:#00e5ff;
+
+}
+
+.card p{
+
+text-align:left;
+
+line-height:28px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
 
 footer{
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
+
+padding:30px;
+
+text-align:center;
+
+background:#020617;
+
+border-top:1px solid #00e5ff33;
+
+margin-top:60px;
+
+color:#aaa;
+
 }
